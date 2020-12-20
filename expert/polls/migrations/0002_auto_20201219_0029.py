@@ -7,21 +7,21 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0001_initial'),
+        ("polls", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='question',
-            name='alt_text',
-            field=models.CharField(default='', max_length=200),
+            model_name="question",
+            name="alt_text",
+            field=models.CharField(default="", max_length=200),
         ),
         migrations.CreateModel(
-            name='Answer',
+            name="Answer",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('answer_text', models.CharField(max_length=200)),
-                ('choice', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='polls.choice')),
+                ("id", models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("answer_text", models.CharField(max_length=200)),
+                ("choice", models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="polls.choice")),
             ],
         ),
     ]
